@@ -1,0 +1,13 @@
+@mixin inputs {
+	display: inline-block;
+	border: none;
+	font-family: inherit;
+	font-size: var(--small-font-size);
+	box-shadow: 1px 1px 3px var(--grey-300);
+	padding: var(--small-padding);
+	border-radius: var(--border-radius);
+}
+
+.input {
+	@include inputs;
+}

@@ -1,0 +1,114 @@
+:root {
+	/* Medidas de media querys */
+	$table-width: 768px;
+	$desktop-width: 1024px;
+	$large-desktop-width: 1400px;
+
+	/* COLORS */
+	--grey-100: #fbfbfe;
+	--grey-200: #fcfcfc;
+	--grey-300: #eff3f5;
+	--grey-400: #c8cdd0;
+	--grey-500: #a0a7ac;
+	--grey-600: #565656;
+	--grey-700: #363636;
+	--grey-800: #282928;
+	--grey-900: #242424;
+	--grey-RGBA: rgb(36, 36, 36, .5);
+
+	--primary-100: #e7f4fd;
+	--primary-200: #b7defa;
+	--primary-300: #88c8f7;
+	--primary-400: #58b3f3;
+	--primary-500: #1192ee;
+	--primary-600: #1083d5;
+	--primary-700: #0c66a6;
+	--primary-800: #094977;
+	--primary-900: #052c48;
+	--primary-RGBA: rgb(17, 146, 238, .5);
+
+	/* Second color */
+	--second-400: hsl(253, 100%, 76%);
+	--second-500: hsl(253, 100%, 71%);
+	--second-600: hsl(253, 100%, 66%);
+	--second-RGBA: rgb(139, 107, 255, .3);
+
+	/* Third color */
+	--third-color400: #FFC14D;
+	--third-color500: #ffa500;
+	--third-color600: #E69500;
+
+	/* otros colores */
+	--four-color400: #55b742;
+	--four-color500: #20b004;
+	--four-color600: #22990b;
+
+	/* Fonts Family */
+	--heading-font: 'Roboto', sans-serif;
+	--body-font: 'Open Sans', sans-serif;
+
+	/* Fonts size */
+	--h1-font-size: 2rem;
+	--h2-font-size: 1.5rem;
+	--h3-font-size: 1.25rem;
+	--normal-font-size: 1rem;
+	--small-font-size: 0.85rem;
+
+	/* Width layout */
+	--width-layout: 80rem;
+
+	/* Heights */
+	--header-height: 4rem;
+
+	/* Paddings */
+	--small-padding: 0.5rem;
+	--normal-padding: 1rem;
+	--large-padding: 1.5rem;
+	--x-large-padding: 2rem;
+
+	/* Margins */
+	--small-margin: 0.5rem;
+	--normal-margin: 1rem;
+	--large-margin: 1.5rem;
+	--x-large-margin: 2rem;
+
+	/* Border-radius */
+	--border-radius: 0.3rem;
+
+	/* Z-index */
+	--z-index100: 100;
+	--z-index200: 110;
+	--z-index300: 120;
+
+	/* grid gaps */
+	--small-gap: 0.5rem;
+	--normal-gap: 1rem;
+	--large-gap: 1.5rem;
+
+	/* Table */
+	--width-table: 1200px;
+	--height-table: 300px;
+	--frozen-width: 10rem;
+
+	// Medidas de las tarjetas de proyectos
+	--height-image: 320px;
+	--width-card: 240px;
+
+	// Box-shadow
+	--box-shadow: 5px 0 8px var(--grey-700);
+
+	
+	@media screen and (min-width: $desktop-width) {
+		& {
+			/* Fonts size */
+			--h1-font-size: 2.5rem;
+			--h2-font-size: 1.75rem;
+			--h3-font-size: 1.50rem;
+			--normal-font-size: 1.1rem;
+			--small-font-size: .95rem;
+	
+			/* Heights */
+			--header-height: 4.5rem;
+		}
+	}
+}

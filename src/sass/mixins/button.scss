@@ -1,0 +1,20 @@
+@mixin button {
+	display:inline-block;
+	border:none;
+	padding:var(--small-padding) var(--large-padding);
+	border-radius:var(--border-radius);
+	cursor:pointer;
+	text-align:center;
+	text-decoration:none;
+	color:inherit;
+	border-width:1px;
+	border-style:solid;
+	border-color: inherit;
+	-webkit-transition:background-color .3s;
+	-o-transition:background-color .3s;
+	transition:background-color .3s
+}
+
+.button {
+	@include button;
+}

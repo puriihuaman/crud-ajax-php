@@ -1,0 +1,8 @@
+@mixin links {
+	text-decoration: none;
+	display: inline-block;
+}
+
+.links {
+	@include links;
+}

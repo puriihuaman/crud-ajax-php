@@ -1,0 +1,86 @@
+doctype html
+html(lang="es")
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		title Crud Ajax - PHP
+		link(rel="preconnect" href="https://fonts.googleapis.com")
+		link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+		link(href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@500&display=swap" rel="stylesheet")
+		link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous")
+	body 
+		header.header 
+			.container
+				h1.title Crud - Ajax & PHP
+
+		main.main#main 
+			.container
+				section.all-users#all-users
+					.top-bar 
+						h2.top-bar__title Lista de usuarios
+						.top-bar__buttons
+							.search 
+								input(type="text" placeholder="Buscar..").input.search__input#search-input
+
+							.user-info-button.top-bar__user-info.button Nuevo
+
+					section.content#content
+						.content__header 
+							div.content__header--info
+								input(type="checkbox", id="select-all-users")
+							-const titles = ['name', 'surname', 'email']
+							each title in titles
+								div.content__header--info
+									p(class='content__text content__text-header')= title
+							div.content__header--info
+								a(href="#" id='delete-all-users' class='button button--delete-all button--hide') Eliminar Todo
+
+						.content__users
+							.content__user
+								input(type="checkbox", name="" id='id-1' class='content__checkbox')
+								p(data-name='pedro' class='content__text') Pedro
+								p(class='content__text') Purihuaman
+								p(class='content__text content__text--email') purihuamanpurihuamanpedro@gmail.com
+								a(href="#" class="content__link button button--edit") Editar
+								a(href="#" class='button button--delete') Eliminar
+							.content__user
+								input(type="checkbox", name="" id='id-2' class='content__checkbox')
+								p(data-name='maria' class='content__text') maria
+								p(class='content__text') pravia
+								p(class='content__text content__text--email') mariapravia08@gmail.com
+								a(href="#" class="content__link button button--edit") Editar
+								a(href="#" class='button button--delete') Eliminar
+							.content__user
+								input(type="checkbox", name="" id='id-3' class='content__checkbox')
+								p(data-name='alison' class='content__text') alison
+								p(class='content__text') purihuaman
+								p(class='content__text content__text--email') alisonpurihuaman@gmail.com
+								a(href="#" class="button button--edit") Editar
+								a(href="#" class='button button--delete') Eliminar
+
+				.users-modal#modal
+					.users-info#users-info
+						.top-bar
+							h2#top-bar-title.top-bar__title Nuevo Usuario
+
+						.content__user.content__user--user-info
+							.content__field
+								label(for="users-info-name" class='content__label') Nombre
+								input(type="text" id='users-info-name' class='input content__text')
+
+							.content__field
+								label(for="users-info-surname" class='content__label') Apellidos
+								input(type="text" id='users-info-surname' class='input content__text')
+
+							.content__field
+								label(for="users-info-email" class='content__label') Email
+								input(type="text" id='users-info-email' class='input content__text content__text--email')
+
+							.content__field
+								a(href="#" id='confirm-user-info' class='button content__link button--edit') Agregar
+								a(href="#" id='' class='button content__link button--cancel') Cancelar
+
+		footer.footer 
+			.container
+				p Hecho por Pedro
