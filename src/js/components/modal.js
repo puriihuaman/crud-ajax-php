@@ -4,10 +4,13 @@ const modal = (( doc ) => {
 				usersInfo = doc.getElementById('users-info'),
 				modal = doc.getElementById('modal'),
 				allUsersChecks = doc.getElementById('select-all-users'),
-				deleteAllUsers = doc.getElementById('delete-all-users');
+				deleteAllUsers = doc.getElementById('delete-all-users'),
+				topBarTitle = doc.getElementById('top-bar-title'),
+				confirmUserInfo = doc.getElementById('confirm-user-info');
 
 	let allUsersButtons = Array.from(doc.querySelectorAll('.content__user .button'));
 	let allChecks = Array.from(doc.querySelectorAll('.content__user .content__checkbox'));
+	let newUser = true;
 
 	const showUserInfo = ( ) => {
 		modal.classList.add('users-modal--active');
@@ -50,8 +53,22 @@ const modal = (( doc ) => {
 		}
 	}
 
+	// Añadir un registro
+	const addUser = ( ) => {
+		topBarTitle.textContent = 'Nuevo usuario';
+		confirmUserInfo.textContent = 'Registrar';
+	}
+
+	// Guarda un 
+	const saveUser = ( ) => {
+		topBarTitle.textContent = 'Editar usuario';
+		confirmUserInfo.textContent = 'Guardar';
+	}
+
 	main.addEventListener('click', ( ev ) => {
 		if ( ev.target.classList.contains('top-bar__user-info') ) {
+			newUser = true;
+			addUser();
 			showUserInfo();
 		} else if ( ev.target.classList.contains('button--cancel') ) {
 			hideUserInfo();
@@ -59,6 +76,10 @@ const modal = (( doc ) => {
 			selectUser( ev.target.id );
 		} else if ( ev.target.id === 'select-all-users' ) {
 			selectAllUsers();
+		} else if ( ev.target.classList.contains('button--edit')) {
+			newUser = false;
+			saveUser();
+			showUserInfo();
 		}
 	})
 })( document );

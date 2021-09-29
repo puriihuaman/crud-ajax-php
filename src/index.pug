@@ -8,7 +8,6 @@ html(lang="es")
 		link(rel="preconnect" href="https://fonts.googleapis.com")
 		link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
 		link(href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@500&display=swap" rel="stylesheet")
-		link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous")
 	body 
 		header.header 
 			.container
@@ -36,7 +35,7 @@ html(lang="es")
 							div.content__header--info
 								a(href="#" id='delete-all-users' class='button button--delete-all button--hide') Eliminar Todo
 
-						.content__users
+						.content__users#content--users
 							.content__user
 								input(type="checkbox", name="" id='id-1' class='content__checkbox')
 								p(data-name='pedro' class='content__text') Pedro
